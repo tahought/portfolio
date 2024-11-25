@@ -1,0 +1,148 @@
+body {
+    background-color: rgba(255, 255, 255, 0.8); /* 白色で80%透明 */
+    background-attachment: fixed;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul {
+  margin: 0 ;
+  padding: 0 ;
+}
+
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  width: 10%; /* ここで項目の幅を指定します */
+}
+
+nav ul li::after{
+  content: "/";
+  padding-left: 50px; /* li要素のwidthと調整が必要 */
+  color: #888;
+
+}
+
+nav ul li:last-child::after {
+  content: ""; /* 最後のli要素の「/」をなくします */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+body{
+  position: relative; /* 今の位置を基準 */
+  top: 10px; /* 上から10px */
+  left: 10px; /* 左から20px */
+  }
+
+nav{
+  position: relative; /* 今の位置を基準 */
+  top: 380px; /* 上から10px */
+
+  } 
+
+taho{
+  position: relative; /* 今の位置を基準 */
+  left: 380px; /* 上から10px */
+
+  } 
+
+his{  
+  position: relative; 
+  bottom: 30px;
+  left: 400px;
+}
+
+skill {
+  display: flex;
+  list-style: none;
+  position: relative; 
+  bottom: 50px;
+  left: 100px;
+}
+
+pro {  position: relative; 
+  bottom: 50px;
+  left: 100px;
+}
+
+tool {
+  display: flex;
+  list-style: none;
+  position: relative; 
+  bottom: 50px;
+  left: 100px;
+}
+
+.item_box * {
+  box-sizing: border-box;
+  
+}
+
+.item_box {
+  width: 150%;
+  max-width: 400px; /* 幅調整 */
+}
+
+.item_link {
+  display: block;
+}
+
+.item_content {
+  position: relative;
+  overflow: hidden;
+}
+
+.item_image img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.item_mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+}
+
+.item_mask-text {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 0.8em;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.item_text {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.item_box .item_link:hover .item_mask {
+  opacity: 1;
+}
+
+ph{
+  position: relative; 
+  bottom: 280px;
+  left: 600px;
+}
+
+ph2{
+  position: relative; 
+  bottom: 280px;
+  left: 600px;
+}
