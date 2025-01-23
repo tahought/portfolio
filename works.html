@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成果物紹介</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #f6d365, #fda085);
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #555;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-card h3 {
+            margin: 15px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .project-card p {
+            margin: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .project-card a {
+            display: block;
+            margin: 15px;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #fda085;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-card a:hover {
+            background-color: #f6d365;
+        }
+
+        .project-card img {
+        width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-card h3 {
+            margin: 15px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .project-card p {
+            margin: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .project-card a {
+            display: block;
+            margin: 15px;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #fda085;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-card a:hover {
+            background-color: #f6d365;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-images img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .carousel-arrow.left {
+            left: 10px;
+        }
+
+        .carousel-arrow.right {
+            right: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    
+    <script type="text/javascript">
+            $(document).ready(function(){
+                $('.slider').bxSlider({
+                    auto: true,
+                    pause: 5000, // 画像がスライドするスピード
+                    slideWidth: 400, // 画像の横幅
+                });
+            });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>成果物紹介</h1>
+    </header>
+
+    <div class="projects-container">
+        <div class="project-card">
+            <img src="img/syu-texingu.png" alt="シューティングゲーム">
+            <h3>射撃ゲーム</h3>
+            <p1>手作りのコントローラーとゲーム(Unity)を作成しました。(2025/1)</p1>
+            <a href="">詳細を見る</a>
+        </div>
+
+        <div class="project-card">
+            <img src="img/nanjamoja.png" alt="なんじゃもんじゃ">
+            <h3>なんじゃもんじゃ</h3>
+            <p>pythonでなんじゃもんじゃを作成しました。(2023/7)</p>
+            <a href="https://github.com/tahought/googlecolab">詳細を見る</a>
+        </div>
+
+        <div class="project-card">
+            <div class="carousel">
+                <div class="slider">
+                    <img src="img/osero1.png" alt="osero1">
+                    <img src="img/osero2.png" alt="osero2">
+                    <img src="img/osero3.png" alt="osero3">
+                    <img src="img/osero4.png" alt="osero4">
+                    </div>
+            <h3>オセロ</h3>
+            <p>pythonでオセロを作成しました。(2024/12)</p>
+            <a href="#">詳細を見る</a>
+        </div>
+    </div>
+        </script>
+    </body>
+    </html>
+
