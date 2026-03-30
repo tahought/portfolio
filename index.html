@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tahought | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.8;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 32px;
+            height: 2px;
+            background-color: #4f46e5;
+        }
+        .card {
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            background-color: #fff;
+        }
+        .card:hover {
+            border-color: #4f46e5;
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.1);
+            transform: translateY(-4px);
+        }
+        .card-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-bottom: 1px solid #e5e7eb;
+            background-color: #f3f4f6;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 1px solid #e5e7eb;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -4.5px; top: 8px;
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background-color: #4f46e5;
+        }
+        .video-link-card {
+            display: block;
+            position: relative;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .video-link-card:hover {
+            border-color: #4f46e5;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ヘッダー -->
+    <header class="max-w-4xl mx-auto px-6 pt-24 pb-20">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+                <h1 class="text-5xl font-bold tracking-tight text-gray-900 mb-2">tahought</h1>
+                <p class="text-xl text-indigo-600 font-medium">大阪公立大学工業高等専門学校 知能情報コース 3年</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <a href="mailto:ry23080m@st.omu.ac.jp" class="text-gray-400 hover:text-indigo-600 transition" title="Email: ry23080m@st.omu.ac.jp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+                <a href="https://github.com/tahought" target="_blank" class="text-gray-400 hover:text-indigo-600 transition" title="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 pb-24">
+        
+        <!-- About & Vision -->
+        <section class="mb-28">
+            <h2 class="text-2xl section-title">About & Vision</h2>
+            <div class="max-w-3xl">
+                <p class="text-gray-700 leading-relaxed text-lg">
+                    「世の中の技術がどのような仕組みで動いているのか」に強い興味がある学生エンジニアです。現在はAIやWeb開発、インフラなど領域を問わず、まずは自分で手を動かして触れてみることから始めています。将来的には、技術を活かして社会の課題を解決できるようなサービスを自ら形にしたいと考えています。
+                </p>
+            </div>
+        </section>
+
+        <!-- スキル -->
+        <section class="mb-24">
+            <h2 class="text-2xl section-title">Skills & Expertise</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="p-6 bg-white card rounded-lg">
+                    <h3 class="font-bold text-gray-900 mb-3 flex items-center gap-2 text-sm">
+                        <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        Languages
+                    </h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>Python</li>
+                        <li>C# / C++</li>
+                        <li>TypeScript</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-white card rounded-lg">
+                    <h3 class="font-bold text-gray-900 mb-3 flex items-center gap-2 text-sm">
+                        <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 v2M7 7h10"></path></svg>
+                        Frameworks
+                    </h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>Next.js / React</li>
+                        <li>Unity Engine</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-white card rounded-lg">
+                    <h3 class="font-bold text-gray-900 mb-3 flex items-center gap-2 text-sm">
+                        <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
+                        Infrastructure
+                    </h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>Docker</li>
+                        <li>Linux (Ubuntu)</li>
+                        <li>Git / GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- タイムライン -->
+        <section class="mb-24">
+            <h2 class="text-2xl section-title">Timeline</h2>
+            <div class="space-y-10">
+                <div class="timeline-item">
+                    <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Now</span>
+                    <h3 class="text-lg font-bold text-gray-900">DCON 2026 挑戦中</h3>
+                    <p class="text-gray-600 mt-2 text-sm">Raspberry Piを用いた災害時要救助者発見支援機器の開発。音響認識AIの実装から事業化プランの策定までを担当。</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">2025.07</span>
+                    <h3 class="text-lg font-bold text-gray-900">東京大学 松尾研究室 DL基礎講座 修了</h3>
+                    <p class="text-gray-600 mt-1 text-sm">画像認識・自然言語処理等の数理モデルおよびPyTorch実装技術の習得。</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">2025.03</span>
+                    <h3 class="text-lg font-bold text-gray-900">高専テクノゼミ 実踐プログラム 修了</h3>
+                    <p class="text-gray-600 mt-2 text-sm">
+                        梅田地下街の実地調査に基づき、利用者のニーズに合わせた最適な出口や経路を提示する案内マップ制作プロジェクトを完遂。
+                    </p>
+                    <a href="https://portal.techno-semi.com/practice/team/_2h_nTGt" target="_blank" class="mt-2 inline-flex items-center gap-1 text-xs font-bold text-indigo-600 hover:underline transition">
+                        <span>プロジェクト詳細を表示</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 制作物 -->
+        <section class="mb-24">
+            <h2 class="text-2xl section-title">Selected Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- プロジェクト 1: 災害支援 AI -->
+                <div class="bg-white card rounded-xl">
+                    <img src="images/rescue.png" alt="災害支援AI" class="card-image" onerror="this.src='https://via.placeholder.com/800x450?text=images/rescue.png+Not+Found'">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-900">災害要救助者発見支援機器</h3>
+                            <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">DCON Project</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-6">Raspberry Pi上でAIを動かし、災害現場の騒音の中から人の声や音を検知。要救助者の位置特定を支援するデバイスのプロトタイプ。</p>
+                        
+                        <div class="flex flex-col gap-4">
+                            <a href="documents/rescue.pdf" target="_blank" class="inline-flex items-center gap-2 text-[11px] font-bold text-indigo-600 hover:text-indigo-800 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                <span>プロジェクト資料を表示 (PDF)</span>
+                            </a>
+                            
+                            <div class="flex gap-2">
+                                <span class="text-[10px] font-semibold text-gray-400 border border-gray-200 px-2 py-0.5 rounded">Raspberry Pi</span>
+                                <span class="text-[10px] font-semibold text-gray-400 border border-gray-200 px-2 py-0.5 rounded">Python</span>
+                                <span class="text-[10px] font-semibold text-gray-400 border border-gray-200 px-2 py-0.5 rounded">AI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- プロジェクト 2: HackU シューティングゲーム -->
+                <div class="bg-white card rounded-xl">
+                    <img src="images/hacku.png" alt="HackU Game" class="card-image" onerror="this.src='https://via.placeholder.com/800x450?text=images/hacku.png+Not+Found'">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Arduino × Unity シューティング</h3>
+                            <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">HackU</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-6">Arduinoで自作したコントローラーとUnityを連携させた体感型シューティングゲーム。ハードウェアとソフトウェアのシリアル通信を実装。</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://github.com/create-alt/HackU_new" target="_blank" class="inline-flex items-center gap-1 text-[10px] font-bold text-indigo-600 hover:underline">
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                Unity Repo
+                            </a>
+                            <a href="https://github.com/kuri227/hackU" target="_blank" class="inline-flex items-center gap-1 text-[10px] font-bold text-indigo-600 hover:underline">
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                Arduino Repo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- プロジェクト 3: PDCA TODO -->
+                <a href="https://github.com/tahought/app_pdca" target="_blank" class="bg-white card rounded-xl block">
+                    <img src="images/pdca.png" alt="PDCA TODO App" class="card-image" onerror="this.src='https://via.placeholder.com/800x450?text=images/pdca.png+Not+Found'">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-900">PDCA TODO App</h3>
+                            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-6">タスク管理に「振り返り」を統合。自身の活動ログを分析し、生産性向上を図るためのパーソナルツール。</p>
+                        <div class="flex gap-2">
+                            <span class="text-[10px] font-semibold text-gray-400 border border-gray-200 px-2 py-0.5 rounded">Python</span>
+                            <span class="text-[10px] font-semibold text-gray-400 border border-gray-200 px-2 py-0.5 rounded">Docker</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 補足: 部活動 -->
+        <section class="mb-20 pt-16 border-t border-gray-100">
+            <h2 class="text-lg font-bold text-gray-400 mb-8 flex items-center gap-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Appendix: Club Activities
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                <div class="text-sm text-gray-600 space-y-4">
+                    <h3 class="font-bold text-gray-900 underline decoration-indigo-200 decoration-2 underline-offset-4">部活動について</h3>
+                    <p>
+                        部活では水泳部に所属し、<strong>競泳、水球、シンクロ（アーティスティックスイミング）</strong>の3種目に取り組んでいます。
+                    </p>
+                    <p>
+                        シンクロの演技映像をYouTubeで公開していますので、お時間あればご覧ください。
+                    </p>
+                </div>
+                
+                <a href="https://www.youtube.com/watch?v=TT8HZF65Drk&t=904s" target="_blank" class="video-link-card group">
+                    <div class="aspect-video bg-gray-900 overflow-hidden flex items-center justify-center relative">
+                        <img src="images/youtube_thumb.png" alt="YouTube Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform" onerror="this.style.display='none'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="absolute z-10 opacity-80"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    </div>
+                    <div class="p-4 bg-white border-t border-gray-100 flex items-center justify-between">
+                        <div>
+                            <span class="block text-xs font-bold text-gray-400 uppercase">YouTube Record</span>
+                            <span class="text-sm font-semibold text-gray-900">シンクロ演技を表示 (15:04〜)</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-300 group-hover:text-indigo-600"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="border-t border-gray-100 py-12 text-center text-gray-400">
+        <p class="text-xs uppercase tracking-[0.4em] font-semibold">&copy; 2026 tahought / Portfolio</p>
+    </footer>
+
+</body>
+</html>
